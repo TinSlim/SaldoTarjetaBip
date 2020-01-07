@@ -1,0 +1,39 @@
+from lxml import etree
+import requests
+
+cuentasBacanes = []
+
+
+def bip(numero):
+    pagina = "http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=" + str(numero)
+    response=requests.get(pagina)
+    #doc=etree.parse(response.)
+    #print(response.json())
+    # GET http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip={id}
+    #JSON=response.json()
+
+    #print("Hola su id es: " + str(JSON['id']) + " y su saldo es: " + JSON['saldoTarjeta'])
+    #saldo = int(JSON['saldoTarjeta'].replace("$","").replace(".",""))
+    #if(saldo>2000):
+    #    cuentasBacanes.append(JSON)
+    #    print("Esta cuenta Apaña")
+    #print((cuentasBacanes))
+    return response.json()
+
+def MayorQue(bip):
+    try:
+        numero= (bip['saldoTarjeta'].replace("$","").replace(".",""))
+        if int(numero)>3000:
+            print("saldo: "+str(bip['saldoTarjeta'])+"   numero: "+str(bip['id']))
+            return bip
+    except:
+        #print("error")
+        return
+
+
+
+numero1=1111401
+numero2=1111500
+while(numero1<numero2):
+    MayorQue(bip(numero1))
+    numero1+=1

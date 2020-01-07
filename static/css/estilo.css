@@ -1,0 +1,48 @@
+
+header{
+    background-color: mediumturquoise;
+    color: aliceblue;
+    margin-right: auto;
+    margin-left: auto;
+    width: 550px;
+    height: 65px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+main{
+    background-color: mediumturquoise;
+    color: aliceblue;
+    margin-right: auto;
+    margin-left: auto;
+    width: 550px;
+    height: 100px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+form{
+    margin-top: 15px;
+}
+
+input{
+    margin-top: 7px;
+    width: 90%;
+    height:30px;
+    color: mediumturquoise;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer{
+    background-color: mediumturquoise;
+    color: aliceblue;
+    margin-right: auto;
+    margin-left: auto;
+    width: 550px;
+    height: 100px;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 20px;
+}
