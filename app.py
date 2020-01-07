@@ -21,7 +21,7 @@ def saldo():
         #return resultado
         return render_template('forms2.html',resultado=resultado)
     except:
-        return render_template('forms2.html',resultado='error')
+        return render_template('forms2.html',resultado='Error, número de tarjeta inválido')
 
 
 
