@@ -18,7 +18,8 @@ def saldo():
         numero = response.json()
         resultado = ("saldo: " + str(numero['saldoTarjeta']) + "   numero: " + str(numero['id']))
         #return render_template('forms2.html',resultado=resultado)
-        return resultado
+        #return resultado
+        return render_template('forms2.html',resultado=resultado)
     except:
         return render_template('forms2.html',resultado='error')
 
