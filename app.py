@@ -16,7 +16,7 @@ def saldo():
         pagina = "http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=" + str(numero1)
         response = requests.get(pagina)
         numero = response.json()
-        resultado = ("saldo: " + str(numero['saldoTarjeta']) + "   numero: " + str(numero['id']))
+        resultado = ("Su saldo es : " + str(numero['saldoTarjeta']) + "  "+" Su numero de tarjeta es: " + str(numero['id']))
         #return render_template('forms2.html',resultado=resultado)
         #return resultado
         return render_template('forms2.html',resultado=resultado)
