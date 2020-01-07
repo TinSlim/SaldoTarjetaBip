@@ -17,9 +17,9 @@ def saldo():
         response = requests.get(pagina)
         numero = response.json()
         resultado = ("saldo: " + str(numero['saldoTarjeta']) + "   numero: " + str(numero['id']))
-        return render_template('forms2.html',numerosaldo=resultado)
+        return render_template('forms2.html',resultado=resultado)
     except:
-        return 'error'
+        return render_template('forms2.html',resultado='error')
 
 
 
